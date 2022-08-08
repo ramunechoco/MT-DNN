@@ -487,6 +487,7 @@ class MTDNNModel(MTDNNPretrainedModel):
         ids = []
         metrics = {}
         for idx, (batch_info, batch_data) in enumerate(data):
+            print(idx)
             if idx % 100 == 0:
                 logger.info(f"predicting {idx}")
             batch_info, batch_data = MTDNNCollater.patch_data(
