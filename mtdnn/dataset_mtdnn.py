@@ -378,6 +378,8 @@ class MTDNNCollater:
                 batch_data.append(torch.FloatTensor(labels))
                 batch_info["label"] = len(batch_data) - 1
             elif task_type in (TaskType.Classification, TaskType.Ranking):
+                print(task_type)
+                print(labels)
                 batch_data.append(torch.LongTensor(labels))
                 batch_info["label"] = len(batch_data) - 1
             elif task_type == TaskType.Span:
