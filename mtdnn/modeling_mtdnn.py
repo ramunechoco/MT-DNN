@@ -131,9 +131,9 @@ class MTDNNModel(MTDNNPretrainedModel):
     ):
 
         # Input validation
-        assert (
-            config.init_checkpoint in self.supported_init_checkpoints()
-        ), f"Initial checkpoint must be in {self.supported_init_checkpoints()}"
+        # assert (
+        #     config.init_checkpoint in self.supported_init_checkpoints()
+        # ), f"Initial checkpoint must be in {self.supported_init_checkpoints()}"
 
         assert decoder_opts, "Decoder options list is required!"
         assert task_types, "Task types list is required!"

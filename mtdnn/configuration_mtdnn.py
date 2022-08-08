@@ -124,7 +124,7 @@ class MTDNNConfig(PretrainedConfig):
     ):
         # basic Configuration validation
         # assert inital checkpoint and encoder type are same
-        assert init_checkpoint.startswith(
+        assert init_checkpoint.index(
             encoder_checkpoint_map[encoder_type]
         ), """Encoder type and initial checkpoint mismatch. 
             1 - Bert models
